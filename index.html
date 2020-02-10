@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Froot wars</title>
+    <script src="assets/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="assets/js/game.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="assets/styles.css" type="text/css" media="screen" charset="utf-8">
+  </head>
+
+  <body>
+    <div id="gamecontainer">
+
+      <canvas id="gamecanvas" width="640" height="480" class="gamelayer"></canvas>
+
+      <div id="scorescreen" class="gamelayer">
+        <img id="tooglemusic" src="assets/images/icons/sound.png">
+        <img src="assets/images/icons/prev.png">
+        <span id="score"> Score: 0</span>
+      </div>
+      
+      <div id="gamestartscreen" class="gamelayer">
+        <img src="assets/images/icons/play.png" alt="Play Game" onclick="game.showLevelScreen();">
+        </br>
+        <img src="assets/images/icons/settings.png" alt="Settings">
+      </div>
+
+      <div id="levelselectscreen" class="gamelayer"></div>
+
+      <div id="loadingscreen" class="gamelayer">
+        <div id="loadingmessage"></div>
+      </div>
+
+      <div id="endingscreen" class="gamelayer">
+        <div>
+          <p id="endingmessage">The level is over message</p>
+          <p id="playcurrentlevel"><img src="assets/images/icons/prev.png">Replay current level</p>
+          <p id="playnextlevel"><img src="assets/images/icons/next.png">Play next level</p>
+          <p id="showlevelscreen"><img src="assets/images/icons/return.png">Return to level screen</p>
+        </div>
+      </div>
+
+    </div>
+  </body>
+
+</html>
