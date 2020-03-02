@@ -407,8 +407,8 @@ var levels = {
 	// Datos de nivel
 	data:[
 	 {   // Primer nivel 
-		foreground:'desert-foreground',
-		background:'clouds-background',
+		foreground:'green-foreground',
+		background:'green-background',
 		entities:[
 			{type:"ground", name:"dirt", x:500,y:440,width:1000,height:20,isStatic:true},
 			{type:"ground", name:"steel", x:185,y:390,width:30,height:80,isStatic:true},
@@ -426,8 +426,8 @@ var levels = {
 		]
 	 },
 		{   // Segundo nivel
-			foreground:'desert-foreground',
-			background:'clouds-background',
+			foreground:'green-foreground',
+			background:'green-background',
 			entities:[
 				{type:"ground", name:"dirt", x:500,y:440,width:1000,height:20,isStatic:true},
 				{type:"ground", name:"steel", x:185,y:390,width:30,height:80,isStatic:true},
@@ -450,7 +450,118 @@ var levels = {
 				{type:"hero", name:"superball",x:80,y:405},
 				{type:"hero", name:"pokeball",x:140,y:405},
 			]
-		}
+		},
+		{   // Tercer nivel
+		foreground:'green-foreground',
+		background:'green-background',
+		entities:[
+				{type:"ground", name:"dirt", x:500,y:440,width:1000,height:20,isStatic:true},
+				{type:"ground", name:"steel", x:185,y:390,width:30,height:80,isStatic:true},
+	
+				{type:"block", name:"steel", x:820,y:380,angle:90,width:100,height:25},
+				{type:"block", name:"steel", x:720,y:380,angle:90,width:100,height:25},
+				{type:"block", name:"steel", x:620,y:380,angle:90,width:100,height:25},
+				{type:"block", name:"glass", x:670,y:317.5,width:110,height:25},
+				{type:"block", name:"glass", x:770,y:317.5,width:110,height:25},
+				
+				{type:"block", name:"steel", x:820,y:255,angle:90,width:100,height:25},
+				{type:"block", name:"steel", x:720,y:255,angle:90,width:100,height:25},
+				{type:"block", name:"steel", x:620,y:255,angle:90,width:100,height:25},
+				{type:"block", name:"glass", x:670,y:192.5,width:110,height:25},
+				{type:"block", name:"glass", x:770,y:192.5,width:110,height:25},				
+	
+
+				{type:"villain", name:"bulbasaur",x:765,y:255,calories:590},
+				{type:"villain", name:"pikachu",x:670,y:405,calories:420},
+				{type:"villain", name:"charmander",x:765,y:400,calories:150},
+
+				{type:"hero", name:"ultraball",x:30,y:415},
+				{type:"hero", name:"superball",x:80,y:405},
+				{type:"hero", name:"pokeball",x:140,y:405},
+
+		]
+	 	},
+	  	{   // Cuarto nivel
+		foreground:'green-foreground',
+		background:'green-background',
+		entities:[
+				{type:"ground", name:"dirt", x:500,y:440,width:1000,height:20,isStatic:true},
+				{type:"ground", name:"steel", x:185,y:390,width:30,height:80,isStatic:true},
+				
+				{type:"block", name:"steel", x:550,y:380,angle:90,width:100,height:25},
+				{type:"block", name:"steel", x:550,y:317.5,width:100,height:25},
+				
+				{type:"block", name:"steel", x:820,y:380,angle:90,width:100,height:25},
+				{type:"block", name:"steel", x:720,y:380,angle:90,width:100,height:25},
+				{type:"block", name:"steel", x:620,y:380,angle:90,width:100,height:25},
+				{type:"block", name:"glass", x:670,y:317.5,width:110,height:25},
+				{type:"block", name:"glass", x:770,y:317.5,width:110,height:25},
+				
+				{type:"block", name:"steel", x:820,y:255,angle:90,width:100,height:25},
+				{type:"block", name:"steel", x:720,y:255,angle:90,width:100,height:25},
+				{type:"block", name:"steel", x:620,y:255,angle:90,width:100,height:25},
+				{type:"block", name:"glass", x:670,y:192.5,width:110,height:25},
+				{type:"block", name:"glass", x:770,y:192.5,width:110,height:25},				
+	
+				{type:"villain", name:"pikachu",x:550,y:255,calories:420},
+				{type:"villain", name:"bulbasaur",x:765,y:255,calories:590},
+				{type:"villain", name:"squirtle",x:670,y:405,calories:420},
+				{type:"villain", name:"charmander",x:765,y:400,calories:150},
+				{type:"villain", name:"eevee",x:765,y:155,calories:590},
+
+				{type:"hero", name:"ultraball",x:30,y:415},
+				{type:"hero", name:"superball",x:80,y:405},
+				{type:"hero", name:"pokeball",x:140,y:405},
+
+		]
+	 },
+	 	 {   //Quinto nivel
+		foreground:'green-foreground',
+		background:'green-background',
+		entities:[
+				{type:"ground", name:"dirt", x:500,y:440,width:1000,height:20,isStatic:true},
+				{type:"ground", name:"steel", x:185,y:390,width:30,height:80,isStatic:true},
+				
+				{type:"block", name:"steel", x:550,y:380,angle:90,width:100,height:25},
+				{type:"block", name:"steel", x:550,y:317.5,width:100,height:25},
+				{type:"block", name:"steel", x:545,y:280,angle:90,width:100,height:25},
+				{type:"block", name:"steel", x:545,y:240.5,width:100,height:25},
+				
+				
+				
+				
+				{type:"block", name:"steel", x:820,y:380,angle:90,width:100,height:35},
+				{type:"block", name:"steel", x:720,y:380,angle:90,width:100,height:25},
+				{type:"block", name:"steel", x:620,y:380,angle:90,width:100,height:25},
+				{type:"block", name:"glass", x:670,y:320.5,width:110,height:25},
+				{type:"block", name:"glass", x:770,y:320.5,width:110,height:25},
+				
+				{type:"block", name:"steel", x:655,y:255,angle:-45,width:130,height:15},
+				{type:"block", name:"steel", x:720,y:255,angle:90,width:120,height:45},
+				{type:"block", name:"steel", x:820,y:255,angle:90,width:120,height:25},
+				{type:"block", name:"glass", x:770,y:180,width:130,height:20},
+				
+				{type:"block", name:"steel", x:870,y:380,angle:90,width:100,height:25},
+				{type:"block", name:"steel", x:870,y:255,angle:90,width:100,height:25},
+				{type:"block", name:"steel", x:870,y:170,angle:90,width:50,height:25},
+				{type:"block", name:"steel", x:870,y:317.5,width:100,height:25},
+				
+				{type:"villain", name:"hitmonchan",x:780,y:270,calories:500},
+				{type:"villain", name:"squirtle",x:665,y:405,calories:420},
+				{type:"villain", name:"pikachu",x:780,y:170,calories:420},
+				{type:"villain", name:"charmander",x:870,y:150,calories:420},
+				{type:"villain", name:"bulbasaur",x:765,y:405,calories:420},
+				{type:"villain", name:"eevee",x:900,y:405,calories:590},
+				{type:"villain", name:"diglett",x:580,y:290,calories:200},
+				
+				
+
+				{type:"hero", name:"ultraball",x:30,y:415},
+				{type:"hero", name:"superball",x:80,y:405},
+				{type:"hero", name:"pokeball",x:140,y:405},
+
+		]
+	 },
 	],
 
 	// Inicializar pantalla de selección de nivel
@@ -534,7 +645,7 @@ var entities = {
 			shape:"rectangle",
 			fullHealth:80,
 			width:40,
-			height:60,
+			height:50,
 			density:1,
 			friction:0.5,
 			restitution:0.7,	
@@ -543,7 +654,43 @@ var entities = {
 			shape:"rectangle",
 			fullHealth:50,
 			width:40,
+			height:45,
+			density:1,
+			friction:0.5,
+			restitution:0.6,	
+		},
+		"eevee":{
+			shape:"rectangle",
+			fullHealth:50,
+			width:60,
 			height:50,
+			density:1,
+			friction:0.5,
+			restitution:0.6,	
+		},
+		"squirtle":{
+			shape:"rectangle",
+			fullHealth:50,
+			width:50,
+			height:45,
+			density:1,
+			friction:0.5,
+			restitution:0.6,	
+		},
+		"hitmonchan":{
+			shape:"rectangle",
+			fullHealth:50,
+			width:50,
+			height:75,
+			density:1,
+			friction:0.5,
+			restitution:0.6,	
+		},
+		"diglett":{
+			shape:"rectangle",
+			fullHealth:20,
+			width:30,
+			height:25,
 			density:1,
 			friction:0.5,
 			restitution:0.6,	
@@ -557,14 +704,14 @@ var entities = {
 		},
 		"superball":{
 			shape:"circle",
-			radius:25,
+			radius:20,
 			density:1.5,
 			friction:0.5,
 			restitution:0.4,	
 		},
 		"ultraball":{
 			shape:"circle",
-			radius:35,
+			radius:25,
 			density:2.0,
 			friction:0.5,
 			restitution:0.4,	
