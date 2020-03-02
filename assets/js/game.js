@@ -9,6 +9,7 @@ var b2PolygonShape = Box2D.Collision.Shapes.b2PolygonShape;
 var b2CircleShape = Box2D.Collision.Shapes.b2CircleShape;
 var b2DebugDraw = Box2D.Dynamics.b2DebugDraw;
 
+var timeBottom = 0;
 // Solicitud de requestAnimationFrame y cancelAnimationFrame para su uso en el código del juego
 (function() {
 	var lastTime = 0;
@@ -221,10 +222,19 @@ var game = {
 		if (game.mode == "fired"){		
 			//Vista panorámica donde el héroe se encuentra actualmente...
 			var heroX = game.currentHero.GetPosition().x*box2d.scale;
-			game.panTo(heroX);
+            var heroY = game.currentHero.GetPosition().y;
 
-			//Y esperar hasta que deja de moverse o está fuera de los límites
-			if(!game.currentHero.IsAwake() || heroX<0 || heroX >game.currentLevel.foregroundImage.width ){
+			game.panTo(heroX);
+            
+            // Si el heroe esta en el suelo suma 1 a la variable
+            if(heroY>=13.40){
+                timeBottom+=1.0;
+
+            }else{
+                timeBottom=0;
+            }
+			//Y esperar hasta que deja de moverse o está fuera de los límites o durante 350 ejecuciones seguidas está en el suelo
+			if(!game.currentHero.IsAwake() || heroX<0 || heroX >game.currentLevel.foregroundImage.width || timeBottom >350){
 				// Luego borra el viejo héroe
 				box2d.world.DestroyBody(game.currentHero);
 				game.currentHero = undefined;
