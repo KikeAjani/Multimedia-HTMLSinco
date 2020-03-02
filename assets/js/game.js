@@ -52,13 +52,13 @@ var game = {
 	
 		//"Kindergarten" by Gurdonark
 		//http://ccmixter.org/files/gurdonark/26491 is licensed under a Creative Commons license
-		game.backgroundMusic = loader.loadSound('assets/audio/gurdonark-kindergarten');
+		game.backgroundMusic = loader.loadSound('assets/audio/pokemoncenter');
 
-		game.slingshotReleasedSound = loader.loadSound("assets/audio/released");
-		game.bounceSound = loader.loadSound('assets/audio/bounce');
+		game.slingshotReleasedSound = loader.loadSound("assets/audio/pokerelease");
+		game.bounceSound = loader.loadSound('assets/audio/pokebounce');
 		game.breakSound = {
-			"glass":loader.loadSound('assets/audio/glassbreak'),
-			"steel":loader.loadSound('assets/audio/woodbreak')
+			"glass":loader.loadSound('assets/audio/glass'),
+			"steel":loader.loadSound('assets/audio/metal')
 		};
 
 
