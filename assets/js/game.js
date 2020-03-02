@@ -792,7 +792,7 @@ var loader = {
 	itemLoaded:function(){
 		loader.loadedCount++;
 		$('#loadingmessage').html('Loaded '+loader.loadedCount+' of '+loader.totalCount);
-		if (loader.loadedCount === loader.totalCount){
+		if (loader.loadedCount >= loader.totalCount){
 			// Loader se ha cargado completamente. . .
 			loader.loaded = true;
 			// Ocultar la pantalla de carga
