@@ -52,6 +52,17 @@
     font: 12px Arial;
 }
 
+#powerups {
+    left: 220px;
+    top: 20px;
+    position: absolute;
+    height: 300px;
+    width: 250px;
+    font: 15px Arial;
+    text-shadow: 0 0 2px #000;
+    color: white;
+}
+
 #scorescreen {
     height: 60px;
     font: 32px Arial;

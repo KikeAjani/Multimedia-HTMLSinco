@@ -120,7 +120,7 @@ var game = {
         // Display the game canvas and score 
         $('#gamecanvas').show();
         $('#scorescreen').show();
-
+        $('#powerups').show();
         game.startBackgroundMusic();
 
         game.mode = "intro";
@@ -373,13 +373,21 @@ var game = {
         }
     },
     drawAllBodies: function () {
+        var superballs = 0;
+        var ultraballs = 0;
         box2d.world.DrawDebugData();
-
         // Iterar a través de todos los cuerpos y dibujarlos en el lienzo del juego		  
         for (var body = box2d.world.GetBodyList(); body; body = body.GetNext()) {
             var entity = body.GetUserData();
 
             if (entity) {
+                if (entity.name.localeCompare("superball") === 0) {
+                    superballs++;
+                }
+                if (entity.name.localeCompare("ultraball") === 0) {
+                    ultraballs++;
+                }
+
                 var entityX = body.GetPosition().x * box2d.scale;
                 if (entityX < 0 || entityX > game.currentLevel.foregroundImage.width || (entity.health && entity.health < 0)) {
                     box2d.world.DestroyBody(body);
@@ -395,6 +403,15 @@ var game = {
                 }
             }
         }
+        var text = "";
+        if (superballs > 0) {
+            text += "Superball--> 'D' = downward force <br/>"
+        }
+        if (ultraballs > 0) {
+            text += "Ultraball--> 'F' = right impulse <br/>"
+        }
+        $('#powerups').html('PowerUps:  <br/>' + text);
+
     },
     drawSlingshotBand: function () {
         game.context.strokeStyle = "rgb(68,31,11)"; // Color marrón oscuro
