@@ -10,6 +10,9 @@ var b2CircleShape = Box2D.Collision.Shapes.b2CircleShape;
 var b2DebugDraw = Box2D.Dynamics.b2DebugDraw;
 
 var timeBottom = 0;
+var remainingForceDown = 1;
+var remainingForceRight = 1;
+
 // Solicitud de requestAnimationFrame y cancelAnimationFrame para su uso en el código del juego
 (function () {
     var lastTime = 0;
@@ -231,8 +234,25 @@ var game = {
 
             game.panTo(heroX);
 
+            $(document).keypress(function (event) {
+                var down;
+                var key = String.fromCharCode(event.which);
+
+                if (key.localeCompare("d") === 0 && game.currentHero.m_userData.name.localeCompare("superball") === 0 && remainingForcesDown > 0) {
+                    var impulse = new b2Vec2(0, 150);
+                    game.currentHero.ApplyImpulse(impulse, game.currentHero.GetWorldCenter());
+                    remainingForcesDown--;
+                }
+
+                if (key.localeCompare("f") === 0 && game.currentHero.m_userData.name.localeCompare("ultraball") === 0 && remainingForcesRight > 0) {
+                    var impulse = new b2Vec2(100, 0);
+                    game.currentHero.ApplyImpulse(impulse, game.currentHero.GetWorldCenter());
+                    remainingForcesRight--;
+                }
+            });
+
             // Si el heroe esta en el suelo suma 1 a la variable
-            if (heroY >= 13.0) {
+            if (heroY >= 13.0 || heroY < 0.0) {
                 timeBottom += 1.0;
 
             } else {
@@ -1254,6 +1274,10 @@ var levels = {
     load: function (number) {
         //Inicializar box2d world cada vez que se carga un nivel
         box2d.init();
+
+        //Inicializamos los power ups de SuperBall y UltraBall a 1
+        remainingForcesRight = 1;
+        remainingForcesDown = 1;
 
         // Declarar un nuevo objeto de nivel actual
         game.currentLevel = {
