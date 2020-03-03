@@ -54,7 +54,7 @@
 
 #scorescreen {
     height: 60px;
-    font: 32px Comic Sans MS;
+    font: 32px Arial;
     text-shadow: 0 0 2px #000;
     color: white;
 }
@@ -87,7 +87,7 @@ endingscreen {
 }
 
 #endingscreen p {
-    font: 20px Comic Sans MS;
+    font: 20px Arial;
     text-shadow: 0 0 2px #000;
     color: white;
 }
@@ -99,7 +99,7 @@ endingscreen {
 }
 
 #endingscreen #endingmessage {
-    font: 32px Comic Sans MS;
+    font: 32px Arial;
     text-shadow: 0 0 2px #000;
     color: white;
 }
